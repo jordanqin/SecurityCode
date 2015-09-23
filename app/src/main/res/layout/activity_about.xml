@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:background="@color/background"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/md_black_1000"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/md_grey_900"
+            android:textSize="14sp"
+            tools:text="@string/version"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/introduce_title"
+        android:textColor="@color/md_grey_600"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/card">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:text="@string/introduce"
+            android:textColor="@color/md_grey_800"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="12dp"
+        android:background="@color/md_grey_500"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/author_title"
+        android:textColor="@color/md_grey_600"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card">
+
+        <ImageView
+            android:id="@+id/ig_avatar_jordanqin"
+            android:layout_width="@dimen/avatar_size"
+            android:layout_height="@dimen/avatar_size"
+            android:layout_margin="16dp"
+            android:src="@mipmap/avatar_jordanqin"/>
+
+        <TextView
+            android:id="@+id/tv_jordanqin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ig_avatar_jordanqin"
+            android:layout_toEndOf="@id/ig_avatar_jordanqin"
+            android:layout_toRightOf="@id/ig_avatar_jordanqin"
+            android:text="@string/author_name_jordanqin"
+            android:textColor="@color/md_grey_800"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_jordanqin"
+            android:layout_toEndOf="@id/ig_avatar_jordanqin"
+            android:layout_toRightOf="@id/ig_avatar_jordanqin"
+            android:paddingBottom="16dp"
+            android:text="@string/developer_and_designer"
+            android:textColor="@color/md_grey_600"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="12dp"
+        android:background="@color/md_grey_500"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/share_title"
+        android:textColor="@color/md_grey_600"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:background="@drawable/card">
+
+        <me.drakeet.library.UIButton
+            android:id="@+id/btn_circle"
+            android:layout_width="@dimen/share_image_size"
+            android:layout_height="@dimen/share_image_size"
+            android:layout_alignParentLeft="true"
+            app:shape_type="round"
+            android:background="@mipmap/circle"/>
+
+        <me.drakeet.library.UIButton
+            android:id="@+id/btn_wechat"
+            android:layout_width="@dimen/share_image_size"
+            android:layout_height="@dimen/share_image_size"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/wechat"/>
+
+        <me.drakeet.library.UIButton
+            android:id="@+id/btn_share"
+            android:layout_width="@dimen/share_image_size"
+            android:layout_height="@dimen/share_image_size"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/share"/>
+    </RelativeLayout>
+    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
